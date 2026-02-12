@@ -1,6 +1,6 @@
 import { Navbar, NavbarBrand, NavbarLink } from "flowbite-react";
 import { useEffect, useRef, useState } from "react";
-
+import logo from "../../assets/Images/logo-light.png"
 export function MainNavbar() {
   const [isOpen, setIsOpen] = useState(null);
   const [show, setShow] = useState(true);
@@ -32,7 +32,7 @@ export function MainNavbar() {
     >
       <NavbarBrand href="#" className="[&>img]:h-10">
         <img
-          src="/src/assets/Images/logo-light.png"
+          src={logo}
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
         />
