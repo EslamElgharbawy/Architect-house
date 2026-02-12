@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  transition: padding-top 0.3s ease;
+}
+body.menu-open {
+  padding-top: 384px;
+}
+.nav {
+  width: 100%;
+}
+.nav > div {
+  height: 100%;
+}
+
+.links > ul {
+  height: 100%;
+}
+.links > ul > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menuToggle {
+  color: white;
+  font-size: 30px;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.3s;
+}
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: white;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.menu::before,
+.menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.menu::before {
+  top: -8px;
+}
+
+.menu::after {
+  top: 8px;
+}
+
+.menu.active {
+  background-color: transparent;
+}
+
+.menu.active::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu.active::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-bottom: 2px solid #000;
+  position: relative;
+}
+.circle::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.bg_overlay::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgba(0, 0, 0, 0.6) !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 100%;
+  text-align: center;
+  color: white !important;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.swiper-button-next {
+  right: 25px !important;
+}
+.swiper-button-prev {
+  left: 25px !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+}
+.swiper-button-prev > svg,
+.swiper-button-next > svg {
+  width: 10px !important;
+}
+.swiper-button-prev svg path,
+.swiper-button-next svg path {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.2;
+}
+
+@media (max-width: 819px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.sec4_img {
+  background-image: url(./assets/Images/archi16.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 150%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50%;
+}
+.goals::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.sec6_img {
+  background-image: url(./assets/Images/archi-12.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 130%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30%;
+}
+.Testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.testimonial_content {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 22px 26px;
+  border-radius: 4px;
+  position: relative;
+}
+.testimonial_content::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 26px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  position: static;
+}
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  padding: 4px;
+  transform: scale(1.2);
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: transparent !important;
+}
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+}
+.copy_right_icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #535353;
+  text-align: center;
+  margin-bottom: 8px;
+  background: rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100%;
+  color: #535353;
+}
+.footer_info {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  background: url("./assets/Images/contact-details-map.png") no-repeat center
+    center;
+  opacity: 0.11;
+}
