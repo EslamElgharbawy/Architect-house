@@ -35,8 +35,6 @@ body.menu-open {
   align-items: center;
 }
 .menuToggle {
-  color: white;
-  font-size: 30px;
   width: 30px;
   height: 20px;
   position: relative;
@@ -67,7 +65,6 @@ body.menu-open {
   height: 2.5px;
   background-color: white;
   transition: all 0.3s ease;
-  transform-origin: center;
 }
 
 .menu::before {
@@ -128,7 +125,6 @@ body.menu-open {
 
 #hero {
   width: 100%;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;

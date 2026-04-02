@@ -15,7 +15,7 @@ export function MainNavbar() {
       } else {
         setNavBG(false);
       }
-      if (scrollY > lastScrollY.current && scrollY > 100) {
+      if (scrollY > lastScrollY.current && scrollY > 100 && !isOpen) {
         setShow(false);
       } else {
         setShow(true);
@@ -24,7 +24,7 @@ export function MainNavbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isOpen]);
   return (
     <Navbar
       className={`nav fixed top-0 left-0 w-full z-20 h-20 xl:h-24 sm:max-xl:bg-[#312e29] [&>div]:lg:px-4 transition-all duration-300 ease-in-out 

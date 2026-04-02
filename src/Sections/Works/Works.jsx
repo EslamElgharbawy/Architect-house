@@ -11,12 +11,10 @@ export default function Works() {
       const windowH = window.innerHeight;
       const el = parallaxRef1.current;
       const rect = el.parentElement.getBoundingClientRect();
-      // progress من 0 → 1
       const progress = Math.min(
         Math.max((windowH - rect.top) / (windowH + rect.height), 0),
         1,
       );
-      // من -50% إلى 0%
       const topPercent = -50 + progress * 50;
 
       el.style.top = `${topPercent}%`;

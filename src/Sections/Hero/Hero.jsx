@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="hero" className="relative h-[100svh] overflow-hidden ">
+      <section id="hero" className="h-[100svh] overflow-hidden ">
         <div
           ref={heroBgRef}
           className="absolute inset-0 w-full h-full will-change-transform"
@@ -46,7 +46,7 @@ export default function Hero() {
             speed={1000}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             fadeEffect={{ crossFade: true }}
-            loop={isFinite}
+            loop={true}
             modules={[EffectFade, Navigation, Autoplay]}
             className="mySwiper relative h-full"
           >
@@ -84,7 +84,7 @@ export default function Hero() {
               <div className="bg_overlay"></div>
               <div>
                 <div className="w-full h-[100vh]">
-                  <img src={img1} alt="" className="object-cover" />
+                  <img src={img1} alt="" className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
@@ -92,7 +92,7 @@ export default function Hero() {
               <div className="bg_overlay"></div>
               <div>
                 <div className="w-full h-[100vh]">
-                  <img src={img2} alt="" className="object-cover" />
+                  <img src={img2} alt="" className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
@@ -100,7 +100,7 @@ export default function Hero() {
               <div className="bg_overlay"></div>
               <div>
                 <div className="w-full h-[100vh]">
-                  <img src={img3} alt="" className="object-cover" />
+                  <img src={img3} alt="" className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
