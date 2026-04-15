@@ -2,7 +2,7 @@
 
 Architect House is a modern and responsive architecture & interior design website built to showcase services, projects, and company information in a clean and professional layout.
 
-🔗 **Live Demo :**  [https://architect-house.vercel.app/](https://architect-house.vercel.app/?utm_source=chatgpt.com)
+🔗 **Live Demo :**  (https://architect-house.vercel.app/)
 
 ---
 
